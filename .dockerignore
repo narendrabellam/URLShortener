@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+**/data/
+**/.vs/
+.git/
+.env
+.env.*
+!.env.example
+*.pdf
+docs/
+testScripts/

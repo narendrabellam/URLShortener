@@ -1,0 +1,649 @@
+{
+    "scenario":  "greenfield",
+    "runId":  "509367fb1da74dedb5caeeeae5c1c683",
+    "status":  "succeeded",
+    "planVersion":  1,
+    "capturedAt":  "2026-10-25T16:12:58.0697743Z",
+    "nodes":  [
+                  {
+                      "node":  "requirements",
+                      "stage":  "requirements",
+                      "status":  "succeeded",
+                      "attempts":  1
+                  },
+                  {
+                      "node":  "architecture",
+                      "stage":  "architecture",
+                      "status":  "succeeded",
+                      "attempts":  1
+                  },
+                  {
+                      "node":  "implementation",
+                      "stage":  "implementation",
+                      "status":  "succeeded",
+                      "attempts":  1
+                  },
+                  {
+                      "node":  "tests",
+                      "stage":  "testing",
+                      "status":  "succeeded",
+                      "attempts":  2
+                  },
+                  {
+                      "node":  "change-approval",
+                      "stage":  "governance",
+                      "status":  "succeeded",
+                      "attempts":  0
+                  },
+                  {
+                      "node":  "validation",
+                      "stage":  "validation",
+                      "status":  "succeeded",
+                      "attempts":  1
+                  },
+                  {
+                      "node":  "documentation",
+                      "stage":  "documentation",
+                      "status":  "succeeded",
+                      "attempts":  1
+                  },
+                  {
+                      "node":  "review",
+                      "stage":  "quality",
+                      "status":  "succeeded",
+                      "attempts":  1
+                  },
+                  {
+                      "node":  "release-approval",
+                      "stage":  "release",
+                      "status":  "succeeded",
+                      "attempts":  0
+                  },
+                  {
+                      "node":  "release-readiness",
+                      "stage":  "release",
+                      "status":  "succeeded",
+                      "attempts":  1
+                  }
+              ],
+    "metrics":  {
+                    "retries":  1,
+                    "rollbacks":  0,
+                    "recoveries":  0,
+                    "recoveryMsTotal":  0,
+                    "durationMs":  157126,
+                    "activeMs":  155723,
+                    "agentCalls":  8,
+                    "inputTokens":  55636,
+                    "outputTokens":  13387,
+                    "endToEndLatencyMs":  157126,
+                    "meanTimeToRecoveryMs":  0
+                },
+    "validations":  [
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.preserves-existing-members",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "sandbox.apply",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "build.dotnet-build",
+                            "passed":  false
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "test.dotnet-test",
+                            "passed":  false
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.preserves-existing-members",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "sandbox.apply",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "build.dotnet-build",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "test.dotnet-test",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "validation",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "validation",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "validation",
+                            "check":  "policy.preserves-existing-members",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "validation",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "validation",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "validation",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "validation",
+                            "check":  "sandbox.apply",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "validation",
+                            "check":  "build.dotnet-build",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "validation",
+                            "check":  "test.dotnet-test",
+                            "passed":  true
+                        }
+                    ],
+    "auditChain":  {
+                       "valid":  true,
+                       "events":  24
+                   },
+    "summary":  {
+                    "runId":  "509367fb1da74dedb5caeeeae5c1c683",
+                    "scenario":  "greenfield",
+                    "planVersion":  1,
+                    "status":  "succeeded",
+                    "startedAt":  "2026-10-25T16:10:19.0049979+00:00",
+                    "durationMs":  157126,
+                    "agentCalls":  {
+                                       "count":  8,
+                                       "models":  [
+                                                      "gpt-4.1-2025-04-14"
+                                                  ],
+                                       "inputTokens":  55636,
+                                       "outputTokens":  13387,
+                                       "fallbackUsed":  false
+                                   },
+                    "retries":  1,
+                    "rollbacks":  0,
+                    "meanTimeToRecoveryMs":  0,
+                    "validation":  {
+                                       "checks":  [
+                                                      {
+                                                          "check":  "policy.change-set-size",
+                                                          "passed":  true,
+                                                          "node":  "validation",
+                                                          "details":  "4 file(s); allowed 1-6."
+                                                      },
+                                                      {
+                                                          "check":  "policy.path-allowlist",
+                                                          "passed":  true,
+                                                          "node":  "validation",
+                                                          "details":  "All paths are .cs files under allowed source directories. Overwrites existing: source/LinkForge.Persistence/PersistenceModels.cs, source/LinkForge.Persistence/SqliteLinkStore.cs, source/LinkForge.Service/Program.cs"
+                                                      },
+                                                      {
+                                                          "check":  "policy.file-size",
+                                                          "passed":  true,
+                                                          "node":  "validation",
+                                                          "details":  "All files \u003c= 64 KB."
+                                                      },
+                                                      {
+                                                          "check":  "security.secret-scan",
+                                                          "passed":  true,
+                                                          "node":  "validation",
+                                                          "details":  "No credential-shaped content found."
+                                                      },
+                                                      {
+                                                          "check":  "security.forbidden-apis",
+                                                          "passed":  true,
+                                                          "node":  "validation",
+                                                          "details":  "No forbidden API usage found."
+                                                      },
+                                                      {
+                                                          "check":  "policy.preserves-existing-members",
+                                                          "passed":  true,
+                                                          "node":  "validation",
+                                                          "details":  "Overwritten files keep every existing public/internal member."
+                                                      },
+                                                      {
+                                                          "check":  "sandbox.apply",
+                                                          "passed":  true,
+                                                          "node":  "validation",
+                                                          "details":  "Applied 4 file(s) to an isolated copy; the real workspace is untouched."
+                                                      },
+                                                      {
+                                                          "check":  "build.dotnet-build",
+                                                          "passed":  true,
+                                                          "node":  "validation",
+                                                          "details":  "Exit code 0. Determining projects to restore...\r\n  Restored <sandbox>\\source\\LinkForge.Service\\LinkForge.Service.csproj (in 501 ms).\r\n  Restored <sandbox>\\source\\LinkForge.Persistence\\LinkForge.Persistence.csproj (in 501 ms).\r\n  Restored <sandbox>\\source\\LinkForge.Engine\\LinkForge.Engine.csproj (in 501 ms).\r\n  Restored <sandbox>\\testProjects\\LinkForge.Tests\\LinkForge.Tests.csproj (in 567 ms).\r\n  LinkForge.Persistence -\u003e <sandbox>\\source\\LinkForge.Persistence\\bin\\Debug\\net10.0\\LinkForge.Persistence.dll\r\n  LinkForge.Engine -\u003e <sandbox>\\source\\LinkForge.Engine\\bin\\Debug\\net10.0\\LinkForge.Engine.dll\r\n  LinkForge.Service -\u003e <sandbox>\\source\\LinkForge.Service\\bin\\Debug\\net10.0\\LinkForge.Service.dll\r\n  LinkForge.Tests -\u003e <sandbox>\\testProjects\\LinkForge.Tests\\bin\\Debug\\net10.0\\LinkForge.Tests.dll\r\n\r\nBuild succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:18.07"
+                                                      },
+                                                      {
+                                                          "check":  "test.dotnet-test",
+                                                          "passed":  true,
+                                                          "node":  "validation",
+                                                          "details":  "Exit code 0. Test run for <sandbox>\\testProjects\\LinkForge.Tests\\bin\\Debug\\net10.0\\LinkForge.Tests.dll (.NETCoreApp,Version=v10.0)\r\nA total of 1 test files matched the specified pattern.\r\n[xUnit.net 00:00:01.17]     LinkForge.Tests.SandboxIntegrationTests.ValidChange_BuildsAndTestsInTheRealSandbox [SKIP]\r\n[xUnit.net 00:00:01.18]     LinkForge.Tests.SandboxIntegrationTests.BrokenChange_IsCaughtByTheRealCompiler [SKIP]\r\n  Skipped LinkForge.Tests.SandboxIntegrationTests.ValidChange_BuildsAndTestsInTheRealSandbox [1 ms]\r\n  Skipped LinkForge.Tests.SandboxIntegrationTests.BrokenChange_IsCaughtByTheRealCompiler [1 ms]\r\n[xUnit.net 00:00:01.18]     LinkForge.Tests.LiveOpenAiTests.RealWorkflow_ProducesGovernedEvidenceAndIndependentValidation [SKIP]\r\n[xUnit.net 00:00:01.19]     LinkForge.Tests.LiveOpenAiTests.RealProvider_ReturnsAValidArtifactWithRealMetadata [SKIP]\r\n  Skipped LinkForge.Tests.LiveOpenAiTests.RealWorkflow_ProducesGovernedEvidenceAndIndependentValidation [1 ms]\r\n  Skipped LinkForge.Tests.LiveOpenAiTests.RealProvider_ReturnsAValidArtifactWithRealMetadata [1 ms]\r\n\r\nPassed!  - Failed:     0, Passed:   120, Skipped:     4, Total:   124, Duration: 16 s - LinkForge.Tests.dll (net10.0)"
+                                                      }
+                                                  ],
+                                       "allPassed":  true
+                                   },
+                    "approvals":  [
+                                      {
+                                          "node":  "change-approval",
+                                          "approved":  true,
+                                          "actor":  "reviewer",
+                                          "digest":  "7c66c916fea692f20fc957b010891f14add365ed1edf6d46ecfa7f02c6b78387",
+                                          "decidedAt":  "2026-10-25T16:12:07.669201+00:00"
+                                      },
+                                      {
+                                          "node":  "release-approval",
+                                          "approved":  true,
+                                          "actor":  "reviewer",
+                                          "digest":  "",
+                                          "decidedAt":  "2026-10-25T16:12:49.9622422+00:00"
+                                      }
+                                  ],
+                    "failedNodes":  [
+
+                                    ],
+                    "incompleteNodes":  [
+
+                                        ],
+                    "plan":  {
+                                 "requirements":  "Add support for optional link expiry to the shortener: a link created with an expiresAt timestamp stops resolving after that time, while existing links without expiry keep working unchanged. Use HTTP(S) destinations only.",
+                                 "acceptanceCriteria":  [
+                                                            "Expired links return 404 and are not counted as clicks.",
+                                                            "Links without expiry behave exactly as before.",
+                                                            "Expiry timestamps in the past are rejected at creation.",
+                                                            "Automated xUnit tests cover the new behavior."
+                                                        ],
+                                 "graph":  [
+                                               {
+                                                   "node":  "requirements",
+                                                   "stage":  "requirements",
+                                                   "dependsOn":  [
+
+                                                                 ],
+                                                   "status":  "succeeded",
+                                                   "attempts":  1
+                                               },
+                                               {
+                                                   "node":  "architecture",
+                                                   "stage":  "architecture",
+                                                   "dependsOn":  [
+                                                                     "requirements"
+                                                                 ],
+                                                   "status":  "succeeded",
+                                                   "attempts":  1
+                                               },
+                                               {
+                                                   "node":  "implementation",
+                                                   "stage":  "implementation",
+                                                   "dependsOn":  [
+                                                                     "architecture"
+                                                                 ],
+                                                   "status":  "succeeded",
+                                                   "attempts":  1
+                                               },
+                                               {
+                                                   "node":  "tests",
+                                                   "stage":  "testing",
+                                                   "dependsOn":  [
+                                                                     "architecture"
+                                                                 ],
+                                                   "status":  "succeeded",
+                                                   "attempts":  2
+                                               },
+                                               {
+                                                   "node":  "change-approval",
+                                                   "stage":  "governance",
+                                                   "dependsOn":  [
+                                                                     "implementation",
+                                                                     "tests"
+                                                                 ],
+                                                   "status":  "succeeded",
+                                                   "attempts":  0
+                                               },
+                                               {
+                                                   "node":  "validation",
+                                                   "stage":  "validation",
+                                                   "dependsOn":  [
+                                                                     "change-approval"
+                                                                 ],
+                                                   "status":  "succeeded",
+                                                   "attempts":  1
+                                               },
+                                               {
+                                                   "node":  "documentation",
+                                                   "stage":  "documentation",
+                                                   "dependsOn":  [
+                                                                     "change-approval"
+                                                                 ],
+                                                   "status":  "succeeded",
+                                                   "attempts":  1
+                                               },
+                                               {
+                                                   "node":  "review",
+                                                   "stage":  "quality",
+                                                   "dependsOn":  [
+                                                                     "validation",
+                                                                     "documentation"
+                                                                 ],
+                                                   "status":  "succeeded",
+                                                   "attempts":  1
+                                               },
+                                               {
+                                                   "node":  "release-approval",
+                                                   "stage":  "release",
+                                                   "dependsOn":  [
+                                                                     "review"
+                                                                 ],
+                                                   "status":  "succeeded",
+                                                   "attempts":  0
+                                               },
+                                               {
+                                                   "node":  "release-readiness",
+                                                   "stage":  "release",
+                                                   "dependsOn":  [
+                                                                     "release-approval"
+                                                                 ],
+                                                   "status":  "succeeded",
+                                                   "attempts":  1
+                                               }
+                                           ],
+                                 "decisionLineage":  [
+                                                         {
+                                                             "nodeId":  "change-approval",
+                                                             "planVersion":  1,
+                                                             "approval":  {
+                                                                              "approved":  true,
+                                                                              "actor":  "reviewer",
+                                                                              "reason":  "Reviewed in demo.",
+                                                                              "at":  "2026-10-25T16:12:07.669201+00:00",
+                                                                              "changeSetDigest":  "7c66c916fea692f20fc957b010891f14add365ed1edf6d46ecfa7f02c6b78387"
+                                                                          }
+                                                         },
+                                                         {
+                                                             "nodeId":  "release-approval",
+                                                             "planVersion":  1,
+                                                             "approval":  {
+                                                                              "approved":  true,
+                                                                              "actor":  "reviewer",
+                                                                              "reason":  "Ready.",
+                                                                              "at":  "2026-10-25T16:12:49.9622422+00:00",
+                                                                              "changeSetDigest":  ""
+                                                                          }
+                                                         }
+                                                     ]
+                             },
+                    "artifacts":  [
+                                      {
+                                          "node":  "requirements",
+                                          "kind":  "requirements",
+                                          "sha256":  "5ff6f3f7b3dbf13c06dd286747b334280d8434fbc3f75e201e2d4b5917434950",
+                                          "sizeBytes":  2305,
+                                          "planVersion":  1
+                                      },
+                                      {
+                                          "node":  "architecture",
+                                          "kind":  "architecture",
+                                          "sha256":  "42d48470ebbaf905a07b5aca2b670d748f1d82bc17854af467a96ff45554cce4",
+                                          "sizeBytes":  3893,
+                                          "planVersion":  1
+                                      },
+                                      {
+                                          "node":  "tests",
+                                          "kind":  "testing",
+                                          "sha256":  "1a1ca6f267929db2d16785bffdd621e0431a3e4ac351b0f228163c497934905b",
+                                          "sizeBytes":  9996,
+                                          "planVersion":  1
+                                      },
+                                      {
+                                          "node":  "implementation",
+                                          "kind":  "implementation",
+                                          "sha256":  "97378cffac7912a6f255131c937ab626b1a6a15c46e0e461c072005e2a2c0997",
+                                          "sizeBytes":  25122,
+                                          "planVersion":  1
+                                      },
+                                      {
+                                          "node":  "tests",
+                                          "kind":  "testing",
+                                          "sha256":  "97afa10d52678ec3b188c08dc945f4186ccfb855906aba699c2a61c0094b24e4",
+                                          "sizeBytes":  8977,
+                                          "planVersion":  1
+                                      },
+                                      {
+                                          "node":  "documentation",
+                                          "kind":  "documentation",
+                                          "sha256":  "2959d4ac161687ee7a8ebe3157fede2a5c64b18a2cc8bf01a4ea2491823b48db",
+                                          "sizeBytes":  2821,
+                                          "planVersion":  1
+                                      },
+                                      {
+                                          "node":  "review",
+                                          "kind":  "quality",
+                                          "sha256":  "2e1b4b402f8659fc47fa7fe1415390b91498f672bb8043148435f5e9bfd8d55c",
+                                          "sizeBytes":  2291,
+                                          "planVersion":  1
+                                      },
+                                      {
+                                          "node":  "release-readiness",
+                                          "kind":  "release",
+                                          "sha256":  "04c6f121781a865856d944b1060ff1cda2557eedf38f84220c7690f51b473ef5",
+                                          "sizeBytes":  3060,
+                                          "planVersion":  1
+                                      }
+                                  ],
+                    "limitations":  [
+                                        "Release is readiness-only; nothing is deployed or pushed.",
+                                        "Model output is nondeterministic; a proposal that fails validation safe-stops the run.",
+                                        "SQLite is single-writer; the schema is created with EnsureCreated, not migrations."
+                                    ],
+                    "openAssumptions":  [
+                                            "Data is stored in SQLite through EF Core.",
+                                            "Authentication, abuse prevention and production deployment are out of scope for this change."
+                                        ],
+                    "auditChain":  {
+                                       "verified":  true,
+                                       "events":  24,
+                                       "brokenAtSequence":  null
+                                   },
+                    "note":  "Derived from recorded events only. A successful model response is not proof of correctness; see validation checks."
+                }
+}

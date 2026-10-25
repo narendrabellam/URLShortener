@@ -1,0 +1,1382 @@
+{
+    "scenario":  "brownfield",
+    "runId":  "9e32bd2789ee426b817207537538a13a",
+    "status":  "succeeded",
+    "planVersion":  2,
+    "capturedAt":  "2026-10-25T16:06:30.3953771Z",
+    "nodes":  [
+                  {
+                      "node":  "requirements",
+                      "stage":  "requirements",
+                      "status":  "succeeded",
+                      "attempts":  1
+                  },
+                  {
+                      "node":  "architecture",
+                      "stage":  "architecture",
+                      "status":  "succeeded",
+                      "attempts":  1
+                  },
+                  {
+                      "node":  "implementation",
+                      "stage":  "implementation",
+                      "status":  "succeeded",
+                      "attempts":  2
+                  },
+                  {
+                      "node":  "tests",
+                      "stage":  "testing",
+                      "status":  "succeeded",
+                      "attempts":  4
+                  },
+                  {
+                      "node":  "change-approval",
+                      "stage":  "governance",
+                      "status":  "succeeded",
+                      "attempts":  0
+                  },
+                  {
+                      "node":  "validation",
+                      "stage":  "validation",
+                      "status":  "succeeded",
+                      "attempts":  1
+                  },
+                  {
+                      "node":  "documentation",
+                      "stage":  "documentation",
+                      "status":  "succeeded",
+                      "attempts":  1
+                  },
+                  {
+                      "node":  "review",
+                      "stage":  "quality",
+                      "status":  "succeeded",
+                      "attempts":  1
+                  },
+                  {
+                      "node":  "release-approval",
+                      "stage":  "release",
+                      "status":  "succeeded",
+                      "attempts":  0
+                  },
+                  {
+                      "node":  "release-readiness",
+                      "stage":  "release",
+                      "status":  "succeeded",
+                      "attempts":  1
+                  }
+              ],
+    "metrics":  {
+                    "retries":  6,
+                    "rollbacks":  1,
+                    "recoveries":  0,
+                    "recoveryMsTotal":  0,
+                    "durationMs":  485933,
+                    "activeMs":  483464,
+                    "agentCalls":  19,
+                    "inputTokens":  204190,
+                    "outputTokens":  36362,
+                    "endToEndLatencyMs":  485933,
+                    "meanTimeToRecoveryMs":  0
+                },
+    "validations":  [
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.preserves-existing-members",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "sandbox.apply",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "build.dotnet-build",
+                            "passed":  false
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "test.dotnet-test",
+                            "passed":  false
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.preserves-existing-members",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "sandbox.apply",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "build.dotnet-build",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "test.dotnet-test",
+                            "passed":  false
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.preserves-existing-members",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "sandbox.apply",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "build.dotnet-build",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "test.dotnet-test",
+                            "passed":  false
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "sandbox.apply",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "build.dotnet-build",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "test.dotnet-test",
+                            "passed":  false
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.preserves-existing-members",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "sandbox.apply",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "build.dotnet-build",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "test.dotnet-test",
+                            "passed":  false
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.preserves-existing-members",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "sandbox.apply",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "build.dotnet-build",
+                            "passed":  false
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "test.dotnet-test",
+                            "passed":  false
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.preserves-existing-members",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "sandbox.apply",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "build.dotnet-build",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "test.dotnet-test",
+                            "passed":  false
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "implementation",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "tests",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.preserves-existing-members",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "sandbox.apply",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "build.dotnet-build",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "change-approval",
+                            "check":  "test.dotnet-test",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "validation",
+                            "check":  "policy.change-set-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "validation",
+                            "check":  "policy.path-allowlist",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "validation",
+                            "check":  "policy.preserves-existing-members",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "validation",
+                            "check":  "policy.file-size",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "validation",
+                            "check":  "security.secret-scan",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "validation",
+                            "check":  "security.forbidden-apis",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "validation",
+                            "check":  "sandbox.apply",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "validation",
+                            "check":  "build.dotnet-build",
+                            "passed":  true
+                        },
+                        {
+                            "nodeId":  "validation",
+                            "check":  "test.dotnet-test",
+                            "passed":  true
+                        }
+                    ],
+    "auditChain":  {
+                       "valid":  true,
+                       "events":  46
+                   },
+    "summary":  {
+                    "runId":  "9e32bd2789ee426b817207537538a13a",
+                    "scenario":  "brownfield",
+                    "planVersion":  2,
+                    "status":  "succeeded",
+                    "startedAt":  "2026-10-25T15:58:23.3284736+00:00",
+                    "durationMs":  485933,
+                    "agentCalls":  {
+                                       "count":  19,
+                                       "models":  [
+                                                      "gpt-4.1-2025-04-14"
+                                                  ],
+                                       "inputTokens":  204190,
+                                       "outputTokens":  36362,
+                                       "fallbackUsed":  false
+                                   },
+                    "retries":  6,
+                    "rollbacks":  1,
+                    "meanTimeToRecoveryMs":  0,
+                    "validation":  {
+                                       "checks":  [
+                                                      {
+                                                          "check":  "policy.change-set-size",
+                                                          "passed":  true,
+                                                          "node":  "validation",
+                                                          "details":  "2 file(s); allowed 1-6."
+                                                      },
+                                                      {
+                                                          "check":  "policy.path-allowlist",
+                                                          "passed":  true,
+                                                          "node":  "validation",
+                                                          "details":  "All paths are .cs files under allowed source directories. Overwrites existing: source/LinkForge.Service/Program.cs"
+                                                      },
+                                                      {
+                                                          "check":  "policy.file-size",
+                                                          "passed":  true,
+                                                          "node":  "validation",
+                                                          "details":  "All files \u003c= 64 KB."
+                                                      },
+                                                      {
+                                                          "check":  "security.secret-scan",
+                                                          "passed":  true,
+                                                          "node":  "validation",
+                                                          "details":  "No credential-shaped content found."
+                                                      },
+                                                      {
+                                                          "check":  "security.forbidden-apis",
+                                                          "passed":  true,
+                                                          "node":  "validation",
+                                                          "details":  "No forbidden API usage found."
+                                                      },
+                                                      {
+                                                          "check":  "policy.preserves-existing-members",
+                                                          "passed":  true,
+                                                          "node":  "validation",
+                                                          "details":  "Overwritten files keep every existing public/internal member."
+                                                      },
+                                                      {
+                                                          "check":  "sandbox.apply",
+                                                          "passed":  true,
+                                                          "node":  "validation",
+                                                          "details":  "Applied 2 file(s) to an isolated copy; the real workspace is untouched."
+                                                      },
+                                                      {
+                                                          "check":  "build.dotnet-build",
+                                                          "passed":  true,
+                                                          "node":  "validation",
+                                                          "details":  "Exit code 0. Determining projects to restore...\r\n  Restored <sandbox>\\source\\LinkForge.Engine\\LinkForge.Engine.csproj (in 405 ms).\r\n  Restored <sandbox>\\source\\LinkForge.Persistence\\LinkForge.Persistence.csproj (in 405 ms).\r\n  Restored <sandbox>\\source\\LinkForge.Service\\LinkForge.Service.csproj (in 405 ms).\r\n  Restored <sandbox>\\testProjects\\LinkForge.Tests\\LinkForge.Tests.csproj (in 433 ms).\r\n  LinkForge.Persistence -\u003e <sandbox>\\source\\LinkForge.Persistence\\bin\\Debug\\net10.0\\LinkForge.Persistence.dll\r\n  LinkForge.Engine -\u003e <sandbox>\\source\\LinkForge.Engine\\bin\\Debug\\net10.0\\LinkForge.Engine.dll\r\n  LinkForge.Service -\u003e <sandbox>\\source\\LinkForge.Service\\bin\\Debug\\net10.0\\LinkForge.Service.dll\r\n  LinkForge.Tests -\u003e <sandbox>\\testProjects\\LinkForge.Tests\\bin\\Debug\\net10.0\\LinkForge.Tests.dll\r\n\r\nBuild succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:17.98"
+                                                      },
+                                                      {
+                                                          "check":  "test.dotnet-test",
+                                                          "passed":  true,
+                                                          "node":  "validation",
+                                                          "details":  "Exit code 0. Test run for <sandbox>\\testProjects\\LinkForge.Tests\\bin\\Debug\\net10.0\\LinkForge.Tests.dll (.NETCoreApp,Version=v10.0)\r\nA total of 1 test files matched the specified pattern.\r\n[xUnit.net 00:00:01.09]     LinkForge.Tests.SandboxIntegrationTests.ValidChange_BuildsAndTestsInTheRealSandbox [SKIP]\r\n[xUnit.net 00:00:01.11]     LinkForge.Tests.SandboxIntegrationTests.BrokenChange_IsCaughtByTheRealCompiler [SKIP]\r\n  Skipped LinkForge.Tests.SandboxIntegrationTests.ValidChange_BuildsAndTestsInTheRealSandbox [1 ms]\r\n  Skipped LinkForge.Tests.SandboxIntegrationTests.BrokenChange_IsCaughtByTheRealCompiler [1 ms]\r\n[xUnit.net 00:00:01.29]     LinkForge.Tests.LiveOpenAiTests.RealWorkflow_ProducesGovernedEvidenceAndIndependentValidation [SKIP]\r\n[xUnit.net 00:00:01.29]     LinkForge.Tests.LiveOpenAiTests.RealProvider_ReturnsAValidArtifactWithRealMetadata [SKIP]\r\n  Skipped LinkForge.Tests.LiveOpenAiTests.RealWorkflow_ProducesGovernedEvidenceAndIndependentValidation [1 ms]\r\n  Skipped LinkForge.Tests.LiveOpenAiTests.RealProvider_ReturnsAValidArtifactWithRealMetadata [1 ms]\r\n\r\nPassed!  - Failed:     0, Passed:   121, Skipped:     4, Total:   125, Duration: 15 s - LinkForge.Tests.dll (net10.0)"
+                                                      }
+                                                  ],
+                                       "allPassed":  true
+                                   },
+                    "approvals":  [
+                                      {
+                                          "node":  "change-approval",
+                                          "approved":  true,
+                                          "actor":  "reviewer",
+                                          "digest":  "f42cfe4a51bcf65b8954f63cb1e981219459465daadc34c7be2e836eb7d53b97",
+                                          "decidedAt":  "2026-10-25T16:05:39.860716+00:00"
+                                      },
+                                      {
+                                          "node":  "release-approval",
+                                          "approved":  true,
+                                          "actor":  "reviewer",
+                                          "digest":  "",
+                                          "decidedAt":  "2026-10-25T16:06:24.1943581+00:00"
+                                      }
+                                  ],
+                    "failedNodes":  [
+
+                                    ],
+                    "incompleteNodes":  [
+
+                                        ],
+                    "plan":  {
+                                 "requirements":  "Review the existing click-analytics implementation and propose a compatibility-preserving improvement for referrer reporting (for example, a bounded top-referrers summary) without changing existing short-link behavior.\n\n[Automatic re-plan] The previous plan could not be made to build and pass tests. Prefer the smallest, most additive design that reuses existing members exactly as declared. Last failure:\ntest.dotnet-test: Exit code 1. Test run for <sandbox>\\testProjects\\LinkForge.Tests\\bin\\Debug\\net10.0\\LinkForge.Tests.dll (.NETCoreApp,Version=v10.0)\r\nA total of 1 test files matched the specified pattern.\r\n[xUnit.net 00:00:00.82]     LinkForge.Tests.SandboxIntegrationTests.ValidChange_BuildsAndTestsInTheRealSandbox [SKIP]\r\n[xUnit.net 00:00:00.84]     LinkForge.Tests.SandboxIntegrationTests.BrokenChange_IsCaughtByTheRealCompiler [SKIP]\r\n  Skipped LinkForge.Tests.SandboxIntegrationTests.ValidChange_BuildsAndTestsInTheRealSandbox [1 ms]\r\n  Skipped LinkForge.Tests.SandboxIntegrationTests.BrokenChange_IsCaughtByTheRealComp",
+                                 "acceptanceCriteria":  [
+                                                            "Existing short links continue to resolve and count clicks.",
+                                                            "Concurrent resolutions do not lose recorded clicks.",
+                                                            "The change is additive and regression-tested."
+                                                        ],
+                                 "graph":  [
+                                               {
+                                                   "node":  "requirements",
+                                                   "stage":  "requirements",
+                                                   "dependsOn":  [
+
+                                                                 ],
+                                                   "status":  "succeeded",
+                                                   "attempts":  1
+                                               },
+                                               {
+                                                   "node":  "architecture",
+                                                   "stage":  "architecture",
+                                                   "dependsOn":  [
+                                                                     "requirements"
+                                                                 ],
+                                                   "status":  "succeeded",
+                                                   "attempts":  1
+                                               },
+                                               {
+                                                   "node":  "implementation",
+                                                   "stage":  "implementation",
+                                                   "dependsOn":  [
+                                                                     "architecture"
+                                                                 ],
+                                                   "status":  "succeeded",
+                                                   "attempts":  2
+                                               },
+                                               {
+                                                   "node":  "tests",
+                                                   "stage":  "testing",
+                                                   "dependsOn":  [
+                                                                     "architecture"
+                                                                 ],
+                                                   "status":  "succeeded",
+                                                   "attempts":  4
+                                               },
+                                               {
+                                                   "node":  "change-approval",
+                                                   "stage":  "governance",
+                                                   "dependsOn":  [
+                                                                     "implementation",
+                                                                     "tests"
+                                                                 ],
+                                                   "status":  "succeeded",
+                                                   "attempts":  0
+                                               },
+                                               {
+                                                   "node":  "validation",
+                                                   "stage":  "validation",
+                                                   "dependsOn":  [
+                                                                     "change-approval"
+                                                                 ],
+                                                   "status":  "succeeded",
+                                                   "attempts":  1
+                                               },
+                                               {
+                                                   "node":  "documentation",
+                                                   "stage":  "documentation",
+                                                   "dependsOn":  [
+                                                                     "change-approval"
+                                                                 ],
+                                                   "status":  "succeeded",
+                                                   "attempts":  1
+                                               },
+                                               {
+                                                   "node":  "review",
+                                                   "stage":  "quality",
+                                                   "dependsOn":  [
+                                                                     "validation",
+                                                                     "documentation"
+                                                                 ],
+                                                   "status":  "succeeded",
+                                                   "attempts":  1
+                                               },
+                                               {
+                                                   "node":  "release-approval",
+                                                   "stage":  "release",
+                                                   "dependsOn":  [
+                                                                     "review"
+                                                                 ],
+                                                   "status":  "succeeded",
+                                                   "attempts":  0
+                                               },
+                                               {
+                                                   "node":  "release-readiness",
+                                                   "stage":  "release",
+                                                   "dependsOn":  [
+                                                                     "release-approval"
+                                                                 ],
+                                                   "status":  "succeeded",
+                                                   "attempts":  1
+                                               }
+                                           ],
+                                 "decisionLineage":  [
+                                                         {
+                                                             "nodeId":  "requirements",
+                                                             "decision":  "auto-replan",
+                                                             "fromVersion":  1,
+                                                             "toVersion":  2,
+                                                             "invalidated":  [
+                                                                                 "architecture",
+                                                                                 "implementation",
+                                                                                 "tests",
+                                                                                 "change-approval",
+                                                                                 "validation",
+                                                                                 "documentation",
+                                                                                 "review",
+                                                                                 "release-approval",
+                                                                                 "release-readiness"
+                                                                             ]
+                                                         },
+                                                         {
+                                                             "nodeId":  "change-approval",
+                                                             "planVersion":  2,
+                                                             "approval":  {
+                                                                              "approved":  true,
+                                                                              "actor":  "reviewer",
+                                                                              "reason":  "Reviewed in demo.",
+                                                                              "at":  "2026-10-25T16:05:39.860716+00:00",
+                                                                              "changeSetDigest":  "f42cfe4a51bcf65b8954f63cb1e981219459465daadc34c7be2e836eb7d53b97"
+                                                                          }
+                                                         },
+                                                         {
+                                                             "nodeId":  "release-approval",
+                                                             "planVersion":  2,
+                                                             "approval":  {
+                                                                              "approved":  true,
+                                                                              "actor":  "reviewer",
+                                                                              "reason":  "Ready.",
+                                                                              "at":  "2026-10-25T16:06:24.1943581+00:00",
+                                                                              "changeSetDigest":  ""
+                                                                          }
+                                                         }
+                                                     ]
+                             },
+                    "artifacts":  [
+                                      {
+                                          "node":  "requirements",
+                                          "kind":  "requirements",
+                                          "sha256":  "691f22c1894934249305628c3f64b7b73da35ac30a59a00122cc6267fdbdcefb",
+                                          "sizeBytes":  2468,
+                                          "planVersion":  1
+                                      },
+                                      {
+                                          "node":  "architecture",
+                                          "kind":  "architecture",
+                                          "sha256":  "0ae41da4d3cfa3ec17617d02c5290866241f723638924244b59d618f1ab73c6e",
+                                          "sizeBytes":  4305,
+                                          "planVersion":  1
+                                      },
+                                      {
+                                          "node":  "tests",
+                                          "kind":  "testing",
+                                          "sha256":  "abce009d40445cd2d20bd79829fa41a360a33d654c051bef9118c9d626d970cc",
+                                          "sizeBytes":  13402,
+                                          "planVersion":  1
+                                      },
+                                      {
+                                          "node":  "implementation",
+                                          "kind":  "implementation",
+                                          "sha256":  "834019a85bac21777f661d71358c42175fa7772f7323f2d89bc656f60d44079b",
+                                          "sizeBytes":  15823,
+                                          "planVersion":  1
+                                      },
+                                      {
+                                          "node":  "tests",
+                                          "kind":  "testing",
+                                          "sha256":  "f9add93b6bd502f31c4043ad4e3d5c92602307da6e9d4346a302cedc5afdc9b6",
+                                          "sizeBytes":  11553,
+                                          "planVersion":  1
+                                      },
+                                      {
+                                          "node":  "tests",
+                                          "kind":  "testing",
+                                          "sha256":  "94a29e166cc8686670eb93d4029d886cbbfd9e9fe9deacc47e5309049831b2df",
+                                          "sizeBytes":  12446,
+                                          "planVersion":  1
+                                      },
+                                      {
+                                          "node":  "implementation",
+                                          "kind":  "implementation",
+                                          "sha256":  "22efd1f6e827a480b614f9350f7af28673b9c8a3c2c1f538275b259a977efb89",
+                                          "sizeBytes":  5163,
+                                          "planVersion":  1
+                                      },
+                                      {
+                                          "node":  "tests",
+                                          "kind":  "testing",
+                                          "sha256":  "fb565412ea732e2857078a749f5b90e15d10313bbc4ad5d7a8f458a56b981ede",
+                                          "sizeBytes":  12760,
+                                          "planVersion":  1
+                                      },
+                                      {
+                                          "node":  "requirements",
+                                          "kind":  "requirements",
+                                          "sha256":  "af1b236e9b14905f3cd2c4a26ba80be1b82488eec45e65c1da000f7125599efa",
+                                          "sizeBytes":  3143,
+                                          "planVersion":  2
+                                      },
+                                      {
+                                          "node":  "architecture",
+                                          "kind":  "architecture",
+                                          "sha256":  "be06b4b31d1abdf74ef32b691bf6808cafbc88b7012decbe9fffac6fb56aff2f",
+                                          "sizeBytes":  3949,
+                                          "planVersion":  2
+                                      },
+                                      {
+                                          "node":  "tests",
+                                          "kind":  "testing",
+                                          "sha256":  "779911357a5a56b6a8e4be3dcef2154665da4f2e7928c5b4a86493c3712fc81d",
+                                          "sizeBytes":  8594,
+                                          "planVersion":  2
+                                      },
+                                      {
+                                          "node":  "implementation",
+                                          "kind":  "implementation",
+                                          "sha256":  "1cefbf3f930341c04fb6792c1cf720b1c70a3fe52c0ddeaf5b51fd7f2b7caa6f",
+                                          "sizeBytes":  14295,
+                                          "planVersion":  2
+                                      },
+                                      {
+                                          "node":  "tests",
+                                          "kind":  "testing",
+                                          "sha256":  "31b29f6436ab22a92fed9c5a194bf81d4c307b12931f704f5b267e47b235bc24",
+                                          "sizeBytes":  9004,
+                                          "planVersion":  2
+                                      },
+                                      {
+                                          "node":  "tests",
+                                          "kind":  "testing",
+                                          "sha256":  "c92e876b7445faf42e4ecbbeb00f16e0926d2f5fe32adb48be65acee29a1c020",
+                                          "sizeBytes":  8270,
+                                          "planVersion":  2
+                                      },
+                                      {
+                                          "node":  "implementation",
+                                          "kind":  "implementation",
+                                          "sha256":  "2d60fb59fb1abb0b33a84fa7138f325bb844ed941268947edacba5279acb9edd",
+                                          "sizeBytes":  14750,
+                                          "planVersion":  2
+                                      },
+                                      {
+                                          "node":  "tests",
+                                          "kind":  "testing",
+                                          "sha256":  "160aa28bfcf3352d288a6b491913ae98e07497ec769a04bd18fb3434c18cce8c",
+                                          "sizeBytes":  8746,
+                                          "planVersion":  2
+                                      },
+                                      {
+                                          "node":  "documentation",
+                                          "kind":  "documentation",
+                                          "sha256":  "c8c1c973525d7978902b00e6477e4a4652ac336824411f82f255b06c8192fae9",
+                                          "sizeBytes":  3636,
+                                          "planVersion":  2
+                                      },
+                                      {
+                                          "node":  "review",
+                                          "kind":  "quality",
+                                          "sha256":  "a628cebabe10a8acc975cfbe59f78afad122d87e76565218f2ef91a6449c5fab",
+                                          "sizeBytes":  2456,
+                                          "planVersion":  2
+                                      },
+                                      {
+                                          "node":  "release-readiness",
+                                          "kind":  "release",
+                                          "sha256":  "7e13787de1ee7cfedad3016a8785f2d9a6e7a8072de2487d7c377dd08aff0c27",
+                                          "sizeBytes":  3458,
+                                          "planVersion":  2
+                                      }
+                                  ],
+                    "limitations":  [
+                                        "Release is readiness-only; nothing is deployed or pushed.",
+                                        "Model output is nondeterministic; a proposal that fails validation safe-stops the run.",
+                                        "SQLite is single-writer; the schema is created with EnsureCreated, not migrations."
+                                    ],
+                    "openAssumptions":  [
+                                            "Existing short codes, destinations and click counters remain stable.",
+                                            "Migrating off SQLite is not part of this change."
+                                        ],
+                    "auditChain":  {
+                                       "verified":  true,
+                                       "events":  46,
+                                       "brokenAtSequence":  null
+                                   },
+                    "note":  "Derived from recorded events only. A successful model response is not proof of correctness; see validation checks."
+                }
+}

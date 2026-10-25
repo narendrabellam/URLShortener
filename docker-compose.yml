@@ -1,0 +1,43 @@
+name: linkforge
+
+services:
+  api:
+    build:
+      context: .
+      target: final
+    ports:
+      # Bound to loopback on purpose: the API has no authentication.
+      - "127.0.0.1:3000:8080"
+    environment:
+      # Passed through from your shell or the git-ignored .env file. Never write the key in this file.
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OpenAI__Model: ${OPENAI_MODEL:-gpt-4.1}
+      OpenAI__FallbackModel: ${OPENAI_FALLBACK_MODEL:-}
+      ASPNETCORE_ENVIRONMENT: Development
+      Workflow__AllowFaultInjection: ${ALLOW_FAULT_INJECTION:-true}
+      # Lets the model replace existing source/ files (never testProjects/); the diff is still human-approved and validated in a sandbox.
+      Workspace__AllowOverwrite: "true"
+      BASE_URL: http://localhost:3000
+    volumes:
+      - linkforge-data:/data
+
+  test:
+    profiles: ["test"]
+    build:
+      context: .
+      target: test
+    # No OPENAI_API_KEY here: standard tests use deterministic fakes and make no API calls.
+
+  live-tests:
+    profiles: ["live-tests"]
+    build:
+      context: .
+      target: test
+    environment:
+      RUN_LIVE_OPENAI_TESTS: "1"
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OpenAI__Model: ${OPENAI_MODEL:-gpt-4.1}
+    command: ["--filter", "FullyQualifiedName~LiveOpenAiTests"]
+
+volumes:
+  linkforge-data:
