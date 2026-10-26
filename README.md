@@ -12,6 +12,8 @@ independent validation and human approval gates pass.
 | Tests | **xUnit** (deterministic fakes by default; live OpenAI tests are opt-in) |
 | Containers | Dockerfile + **Docker Compose** |
 
+> **Evidence of real runs:** see [Sample run evidence](#sample-run-evidence) and [`docs/evidence/`](docs/evidence).
+
 > **Cost and network note.** Real workflow runs and the live tests call the OpenAI API, which is billed
 > separately by OpenAI. They need a valid `OPENAI_API_KEY` and outbound network access. Standard tests make
 > no API calls.
@@ -53,8 +55,9 @@ curl http://localhost:3000/health
 ```
 
 The container uses the .NET **SDK** image on purpose: the validator runs `dotnet build` and `dotnet test`
-against an isolated copy of the source. The compose file binds to loopback only; the API has no authentication
-(out of scope), so do not expose it publicly.
+against an isolated copy of the source. The compose file binds to loopback only. Authentication was a deliberate
+scope decision for this prototype (see [Known limitations](docs/architecture.md#known-limitations)), so do not expose
+the API publicly.
 
 Without Docker: `dotnet run --project source/LinkForge.Service` (Development profile, port 3000).
 
@@ -156,7 +159,9 @@ by the application, so they cannot be mistaken for real AI execution.
 
 ## Sample run evidence
 
-`docs/evidence/` holds the recorded outcome of one real run per scenario (live OpenAI calls, model `gpt-4.1`), captured with
+[`docs/evidence/`](docs/evidence) holds the recorded outcome of one real run per scenario (live OpenAI calls, model `gpt-4.1`):
+[`greenfield.json`](docs/evidence/greenfield.json), [`brownfield.json`](docs/evidence/brownfield.json) and
+[`ambiguous.json`](docs/evidence/ambiguous.json), captured with
 `./testScripts/demo.ps1 -Scenario <name> -AutoApprove -SaveEvidence`. Each file has node statuses, metrics, every validation
 check (including failed attempts), approvals with digests, artifact hashes, and the audit-chain verification. They contain no
 secrets or machine paths and are not proof for future runs: model output varies between runs.
