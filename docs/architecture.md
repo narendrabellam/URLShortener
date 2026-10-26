@@ -14,7 +14,7 @@ Client ──HTTP──> LinkForge.Service
 
 - **LinkForge.Persistence**: EF Core entities and DbContext, `SqliteLinkStore` (the workload), `SqliteRunRepository`.
 - **LinkForge.Engine**: pipeline coordinator and scenario library (`Pipeline/`), AI provider and resilience (`AiProviders/`), policy, sandbox verification, scrubbing and audit ledger (`Safeguards/`).
-- **LinkForge.Service**: minimal API and run dispatcher (no authentication; out of scope).
+- **LinkForge.Service**: minimal API and run dispatcher.
 - One SQLite file holds URL data and workflow state: runs (JSON payload), hash-chained audit events, agent calls,
   artifact metadata, validation results and approvals.
 
@@ -101,8 +101,10 @@ success rate, retries/run, rollbacks/run, mean time to recovery, end-to-end and 
 
 ## Key decisions and trade-offs
 
-- **SQLite + EF Core** as mandated. SQLite allows a single writer; WAL is enabled and counters use atomic
-  `ExecuteUpdate`. A multi-instance deployment would need a different store (not done here).
+- **SQLite + EF Core** (the mandated stack, and a good fit for a prototype): free, no database server to run, a single
+  small file that ships easily in a Docker volume. SQLite serialises writers rather than writing concurrently, so WAL is
+  enabled (readers are not blocked), writes are short and click counters use atomic `ExecuteUpdate`. A multi-instance
+  production deployment would move to PostgreSQL or SQL Server (not done here).
 - **`EnsureCreated`, not migrations**: simple for a prototype; schema changes require recreating the database.
 - **Run state is held in memory while active** and persisted at each event. On restart, waiting runs are restored and
   interrupted runs are safe-stopped rather than resumed.
@@ -122,7 +124,9 @@ success rate, retries/run, rollbacks/run, mean time to recovery, end-to-end and 
 
 - Live OpenAI behavior depends on model quality: a generated change may fail validation, and the workflow then
   safe-stops by design. Live tests assert governed behavior rather than guaranteed success.
-- The API has no authentication or authorization (out of scope). The approver name (`actor`) is unauthenticated audit metadata; add authentication before any shared deployment.
+- Authentication and authorization are a deliberate scope decision: the assignment does not require them and the API is
+  bound to loopback only. The approver name (`actor`) is therefore unauthenticated audit metadata. A shared deployment
+  would add OIDC/JWT and role-based approvers (requester cannot approve their own change).
 - Test doubles never stand in for AI in the live tests, but they do in the default suite by design.
 - No deployment, push or release automation exists, by design.
 
